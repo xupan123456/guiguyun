@@ -1,0 +1,137 @@
+/* pages/songDetail/songDetail.wxss */
+@import "/static/icofont/icofont.wxss";
+page{
+  height:100%;
+}
+.songDetailContainer{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+}
+.author{
+  color:#fff;
+  font-size:35rpx;
+}
+.songDetailContainer .needle{
+  position: relative;
+  left:60rpx;
+  top:-40rpx;
+  width:192rpx;
+  height:274rpx;
+  z-index: 2;
+  transform-origin: 40rpx 0;   /*设置旋转点 */
+  transform: rotate(-20deg);     /*旋转单位deg */
+  transition: transform 1s;
+}
+.songDetailContainer .needleRotate{
+  transform: rotate(0deg);
+}
+.songDetailContainer .cicle{
+  height:60rpx;
+  width:60rpx;
+  background-color: #fff;
+  margin:10rpx 0;
+  border-radius: 50%;
+  z-index: 3
+}
+.songDetailContainer .discContainer{
+  position: relative;
+  top:-170rpx;
+  height:598rpx;
+  width: 598rpx;
+  z-index: 1;
+  transform: rotate(-360deg)
+}
+ .disc{
+  height:598rpx;
+  width:598rpx;
+}
+/* 定义磁盘旋转动画 */
+.discAnimation{
+  animation: disc 10s linear infinite;
+  animation-delay: 1s;  /* 等摇杆到了磁盘上再旋转 */
+}
+/* @keyframes disc{
+    from to  --只有起始帧和结束帧
+    百分比  --不止2帧
+    0-100%可以任意拆分
+} */
+@keyframes disc{
+  from{
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(360deg)
+  }
+}
+.songDetailContainer .songImg{
+  position: relative;
+  top:-490rpx;
+  left:110rpx;
+  height:370rpx;
+  width:370rpx;
+  z-index:-999
+}
+
+.musicControl{
+  display: flex;
+  position: absolute;
+  bottom:40rpx ;
+  left:0rpx;
+  width:100%;
+  border-top:1px solid #fff;
+
+}
+.musicControl text{
+  width:20%;
+  font-size:56rpx;
+  text-align:center;
+  height:120rpx;
+  line-height: 120rpx;
+  color:#fff;
+  z-index:10000;
+}
+.musicControl .icon-bofang{
+  font-size:75rpx;
+}
+.musicControl .icon-zanting{
+  font-size:75rpx;
+}
+/* 进度条区域 */
+.progressbar{
+  position: absolute;
+  bottom: 200rpx;
+  height:80rpx;
+  width:640rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+/* 包裹进度条 */
+.barprogress{
+  position: relative;
+  height:4rpx;
+  width:450rpx;
+  background: rgba(0,0,0,0.5);
+  margin:auto
+}
+/* 真实进度条 */
+.barprogress-timely{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  height:4rpx;
+  background-color: red;
+} 
+/* 小圆球 */
+.barcircle{
+  position: absolute;
+  top:-4rpx;
+  right:-12rpx;
+  height:12rpx;
+  width:12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}

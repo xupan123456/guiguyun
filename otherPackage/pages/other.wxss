@@ -1,0 +1,7 @@
+/* pages/other/other.wxss */
+text{
+  height:60rpx;
+  width:100rpx;
+  background-color: #ccc;
+  
+}

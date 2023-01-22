@@ -1,0 +1,90 @@
+/* pages/recommand/recommand.wxss */
+@import "/static/icofont/icofont.wxss";
+.header{
+    position: relative;
+    height:300rpx;
+    width:100%;
+}
+.header image{
+    height:100%;
+    width:100%;
+}
+.header .date{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    height:100rpx;
+    width:300rpx;
+    
+    color:#fff;
+    line-height: 100rpx;
+    text-align: center;
+}
+.date .day{
+    font-size: 45rpx;
+}
+.date .month{
+    font-size: 60rpx;
+}
+
+.ListContainer{
+    position: relative;
+    top:-20rpx;
+    padding:0 20rpx;
+    border-radius: 30rpx;
+    background-color: #fff;
+}
+.ListHeader{
+  padding:20rpx 0;
+}
+.ListHeader .more{
+    float:right
+}
+.ListItem{
+    display: flex;
+    height:100rpx;
+    width:100%;
+}
+.ListScroll image{
+    position: relative;
+    height:80rpx;
+    width:80rpx;
+}
+.songInfo{
+    display: flex;
+    flex-direction: column;
+   
+}
+.songInfo text{
+    height:40rpx;
+    line-height:40rpx;
+    margin-left:20rpx;
+    max-width:400rpx ;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.songInfo .songName{
+    font-size:30rpx;
+
+}
+.songInfo .songSinger{
+    font-size:25rpx;
+}
+.ListScroll{
+  height:calc(100vh - 380rpx)
+}
+.ListItem{
+  position: relative;
+}
+.ListItem .icon-gengduo{
+    position: absolute;
+    top:0rpx;
+    right:0rpx;
+    line-height:80rpx ;
+    text-align: center;
+    height:80rpx;
+    width:80rpx;
+}
+

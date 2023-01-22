@@ -1,0 +1,110 @@
+/* pages/search/search.wxss */
+.searchContainer{
+    padding:10rpx 0rpx;
+}
+.header{
+    display:flex;
+    height:60rpx;
+    line-height:60rpx;
+    padding:20rpx;
+}
+.SearchInput{
+    position: relative;
+    flex:1;
+   background-color: rgba(237,237,237,0.5);
+   border-radius: 30rpx;
+}
+.cancel{
+    width:100rpx;
+    text-align: center;
+}
+.sousuo{
+    position: absolute;
+    left:15rpx;
+}
+.SearchInput input{
+    margin-left:50rpx;
+    height:60rpx;
+}
+.input-placeholder{
+    font-size: 35rpx;
+    color:#d43c33;
+}
+.hotContainer .title{
+    margin-top: 20rpx;
+    padding:0 20rpx;
+    height:60rpx;
+    font-size:35rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+}
+.hotList{
+    padding:0 10rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hotItem{
+    width:50%;
+    height:80rpx;
+    line-height: 60rpx;
+    font-size:30rpx;
+}
+.hotItem .order{
+    margin:0 10rpx;
+}
+.hotItem image{
+    width:35rpx;
+    height:20rpx;
+    margin-left:0rpx;
+}
+.searchContent{
+    height:80rpx;
+    line-height: 80rpx;
+    font-size:28rpx;
+    color:#d43c33;
+    border-bottom: 1rpx solid #d43c33;
+}
+.searchItem{
+    height:80rpx;
+    line-height: 80rpx; 
+    display: flex;
+}
+.searchItem .content{
+    flex:1;
+    margin-left:20rpx;
+    font-size:28rpx;
+    border-bottom: 1rpx solid #ccc;
+}   
+.history{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    line-height: 50rpx;
+    margin:20rpx 0;
+}
+.history .title{
+    height:50rpx;
+    font-size:28rpx;
+}
+.historyItem{
+    height:50rpx;
+    font-size:26rpx;
+    padding:0 30rpx;
+    background-color: #ededed;
+    margin-left:20rpx;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+}
+.history .delete{
+    position: absolute;
+    bottom:18rpx;
+    right:15rpx;
+}
+.clear{
+    position: absolute;
+    top:-7rpx;
+    right:10rpx;
+    z-index:999;
+    font-size:35rpx;
+}

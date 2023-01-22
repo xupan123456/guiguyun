@@ -1,0 +1,61 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" class="banner">
+    <swiper-item wx:for="{{bannerList}}" wx:key='targetId'>
+      <image src="{{item.pic}}" alt="" ></image>
+    </swiper-item>
+  </swiper>
+  <!-- 五个导航图标 -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="toRecommand">
+      <text class="iconfont icon-tuijian"></text>
+      <text >每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan"></text>
+      <text class="">歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paixing"></text>
+      <text class="">排行版</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai1"></text>
+      <text class="">电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibo"></text>
+      <text class="">直播</text>
+    </view>
+  </view>
+  <!-- 为你推荐 -->
+  <view class="recommand">
+    <!-- 头部区域 -->
+    <navHeader careRecommand="为你精品推荐" title="为你推荐"></navHeader>
+    <!-- 推荐内容区 -->
+    <scroll-view class="recommandContent" scroll-x enable-flex>
+      <view class="scroll-item" wx:for="{{ personRecommandList}}" wx:key="id">
+        <image class="" src="{{item.picUrl}}" />
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 排行榜 -->
+  <view class="topList">
+    <!-- 头部区域 -->
+    <navHeader careRecommand="热歌风向标" title="排行榜"></navHeader>
+    <!-- 排行榜内容区 -->
+    <swiper class="topListSwiper" 	next-margin="50rpx">
+      <swiper-item wx:for="{{topList}}" wx:key="name">
+        <view class="title">{{item.name}}</view>
+        <view class="musicItem" wx:for="{{item.track}}" wx:key="id" wx:for-item="musicItem">
+          <image src="{{musicItem.al.picUrl}}"></image>
+          <text class="count">{{index+1}}</text>
+          <text class="musicName">{{musicItem.name}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

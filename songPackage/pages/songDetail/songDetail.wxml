@@ -1,0 +1,31 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetailContainer">
+  <text class="author">{{Music.ar[0].name}}</text>
+  <view class="cicle"></view>
+  <!-- {{isPlay?'needleRotate':''}} -->
+  <image class="needle  {{isPlay&& 'needleRotate'}}"  src="/static/images/song/needle.png" ></image>
+  <view class="discContainer {{isPlay&& 'discAnimation'}}">
+    <image class="disc" src="/static/images/song/disc.png" ></image>
+    <image class="songImg" src="{{Music.al.picUrl}}"></image>
+  </view>
+  <!-- /* 进度条区域 */ -->
+  <view class="progressbar">
+    <text>{{currentTime}}</text>
+    <view class="barprogress">
+      <view class="barprogress-timely" style="width:{{currentWidth+'rpx'}}"> 
+        <view class="barcircle">
+
+        </view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+
+  <view class="musicControl" >
+    <text class="iconfont icon-xunhuanbofang"></text>
+    <text class="iconfont icon-shangyishou" id="before" bindtap="handlerSwitch"></text>
+    <text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}}" bindtap="handlerMusicPlay"></text>
+    <text class="iconfont icon-xiayishou" id="after" bindtap="handlerSwitch"></text>
+    <text class="iconfont icon-liebiao"></text>
+  </view>
+</view>

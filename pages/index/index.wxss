@@ -1,0 +1,101 @@
+/**index.wxss**/
+/* 轮播图 */
+.banner{
+  height:300rpx;
+  width:100%;
+}
+swiper-item image{
+  height:100%;
+  width:100%;
+}
+
+/* 五个图标导航 */
+.navContainer{
+  display: flex;
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:20%;
+}
+.navItem .iconfont{
+  height:100rpx;
+  width:100rpx;
+  border-radius: 50%;
+  line-height: 100rpx;
+  text-align: center;
+  background:rgba(240,19,19);
+  color:ivory;
+  font-size:50rpx;
+  margin:20rpx 0;
+}
+.navItem text{
+  font-size:26rpx;
+}
+.recommand,.topList{
+  padding:20rpx 20rpx ;
+}
+
+.recommandContent{
+  display: flex;
+  height:300rpx;
+}
+.sroll-item{
+  width:200rpx;
+}
+.scroll-item image{
+  width:200rpx;
+  height:200rpx;
+  margin-right:20rpx;
+  margin-top:30rpx;
+  border-radius: 10rpx;
+}
+.scroll-item text{
+  width:200rpx;
+  font-size:26rpx;
+  /* 单行文本溢出 */
+  /* display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /* 多行文本溢出 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient: vertical;    /*设置对其方式 */
+  -webkit-line-clamp: 2;
+}
+.topList{
+  padding:20rpx;
+}
+.topListSwiper{
+  height:430rpx;
+}
+swiper-item{
+  width:96%;
+  background-color: #fbfbfb;
+}
+.topListSwiper .title{
+  font-size:30rpx;
+  line-height: 80rpx;
+}
+.musicItem{
+  /*父元素为flex布局，子元素默认为块级元素，但是依旧是排列在一行*/
+  display: flex;
+}
+.musicItem image{
+  height:100rpx;
+  width:100rpx;
+  margin-bottom: 20rpx;
+}
+.musicItem .count{
+  height:100rpx;
+  width:100rpx;
+  text-align: center;
+  line-height:100rpx;
+}
+.musicItem .musicName{
+  line-height: 100rpx;
+}

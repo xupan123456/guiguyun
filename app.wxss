@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "./static/icofont/icofont.wxss";
+page{
+    height:100%;
+    
+}

@@ -1,0 +1,2 @@
+<!--pages/other/other.wxml-->
+<text bindtap="handlerUserInfo">获取用户唯一标识</text>
